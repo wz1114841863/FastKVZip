@@ -23,12 +23,16 @@ ext_modules = []
 generator_flag = []
 cc_flag = []
 # 1. Target NVIDIA A100, RTX3090 (Ampere)
-cc_flag.append("-gencode")
-cc_flag.append("arch=compute_80,code=sm_80")
+#cc_flag.append("-gencode")
+#cc_flag.append("arch=compute_80,code=sm_80")
 
 # 2. Target NVIDIA H100 (Hopper)
+#cc_flag.append("-gencode")
+#cc_flag.append("arch=compute_90,code=sm_90")
+
+# NVIDIA RTX 3060 Laptop (Ampere)
 cc_flag.append("-gencode")
-cc_flag.append("arch=compute_90,code=sm_90")
+cc_flag.append("arch=compute_86,code=sm_86")
 
 # helper function to get cuda version
 def get_cuda_bare_metal_version(cuda_dir):

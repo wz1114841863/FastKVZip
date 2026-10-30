@@ -10,3 +10,4 @@
 !prefill/utils/head_score/*.pt
 !data/method.png
 **/test*.sh
+csrc/dist/
